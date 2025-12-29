@@ -12,11 +12,14 @@ reg [13:0]baudrate_counter;
 reg [9:0]rxshift_reg;
 reg clear_bitcounter, inc_bitcounter, clear_samplecounter, inc_samplecounter;
 
-//constant
+     //Frequency considered 100MHz
 parameter clk_freq = 100_000_000;
+     //Baud Rate of the Uart considered 9600
 parameter baud_rate = 9600;
 parameter div_sample=4;
+     //div_counter = 10^8/(9600*4) = 2605
 parameter div_counter = clk_freq/(baud_rate*div_sample);
+     //midsample = 2
 parameter mid_sample = (div_sample/2);
      //overall bits start, data[8bits], stop
 parameter div_bit = 10;
@@ -38,7 +41,7 @@ if(baudrate_counter >= div_counter - 1) begin
      //perform the reset of baudrate counter based on the div_counter
 baudrate_counter <= 0;
 state <= next_state;
-     //perform shifting based on shift signal which concatenation of input and the receiver shift register
+     //perform right shifting of 10bit register, shifting based on shift signal which concatenation of input and the receiver shift register
 if(shift) rxshift_reg <= {RxD, rxshift_reg[9:1]};
      //we here increment the sample counter based on the in_samplecounter signal
 if(inc_samplecounter) sample_counter <= sample_counter + 1;
