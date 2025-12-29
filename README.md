@@ -14,7 +14,9 @@ clock pulses
 
 => 3. Then it performs the shift operation based on the counter reaching the respective clock pulses it shifts bit by bit to the output of transmiter 
 
-=> 4. If the bitcount reaches to 10 then it reaches to initial state
+=> 4. The output can be viewed in the Tera Term window
+
+=> 5. If the bitcount reaches to 10 then it reaches to initial state
 
 *******************************************************************************************************************************************************************
 
