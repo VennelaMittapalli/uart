@@ -42,9 +42,11 @@ state <= next_state;
 if(shift) rxshift_reg <= {RxD, rxshift_reg[9:1]};
      //we here increment the sample counter based on the in_samplecounter signal
 if(inc_samplecounter) sample_counter <= sample_counter + 1;
-     
+     //clear the samplecounter based on the clearsample counter which gets updated when all the bits are transmitted
 if(clear_samplecounter) sample_counter <= 0;
+     //increment the bitcounter based on the increment bitcounter which gets updated based on the in_bitcounter signal which gets updated when samplecounter reaches the divsample value
 if(inc_bitcounter) bitcounter <= bitcounter + 1;
+     
 if(clear_bitcounter) bitcounter <= 0;
 end
 end
