@@ -2,8 +2,10 @@ UART
 
 UART stands for Universal Asynchronous Receiver Tranmitter which is communication protocol for the Serial Data Transmission. It converts the data from serial to parallel or from parallel to serial. 
 
+RECEIVER FSM
 
 
+<img width="897" height="1006" alt="image" src="https://github.com/user-attachments/assets/406c1094-bec1-4c1b-8922-eb8009edf50c" />
 
 
 =========================================================================================================================================================================================
