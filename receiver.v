@@ -18,24 +18,31 @@ parameter baud_rate = 9600;
 parameter div_sample=4;
 parameter div_counter = clk_freq/(baud_rate*div_sample);
 parameter mid_sample = (div_sample/2);
-parameter div_bit = 10;//overall bits start, data, stop
+     //overall bits start, data[8bits], stop
+parameter div_bit = 10;
 
 assign RxData = rxshift_reg[8:1];
 
 always @(posedge clk_fpga) begin
 if(reset) begin
+     //INITIALIZATION OF RESPECTIVE VALUES TO DEFAULT VALUES
 state <= 0;
 sample_counter <= 0;
 bitcounter <= 0;
 baudrate_counter <= 0;
 end
 else begin
+     //We increment the baudrate counter on every clock edge
 baudrate_counter <= baudrate_counter +1;
 if(baudrate_counter >= div_counter - 1) begin
+     //perform the reset of baudrate counter based on the div_counter
 baudrate_counter <= 0;
 state <= next_state;
+     //perform shifting based on shift signal which concatenation of input and the receiver shift register
 if(shift) rxshift_reg <= {RxD, rxshift_reg[9:1]};
+     //we here increment the sample counter based on the in_samplecounter signal
 if(inc_samplecounter) sample_counter <= sample_counter + 1;
+     
 if(clear_samplecounter) sample_counter <= 0;
 if(inc_bitcounter) bitcounter <= bitcounter + 1;
 if(clear_bitcounter) bitcounter <= 0;
