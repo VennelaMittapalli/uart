@@ -1,4 +1,4 @@
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::UART::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::UART:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 UART stands for Universal Asynchronous Receiver Tranmitter which is communication protocol for the Serial Data Transmission. It converts the data from serial to parallel or from parallel to serial. 
 
@@ -7,11 +7,9 @@ UART stands for Universal Asynchronous Receiver Tranmitter which is communicatio
 TRANSMITER:
 
 => 1. The input to the Transmiter is provided from the on-board switches gets transmited based on the Transmit signal which gets activated based on the Push button which needs to pressed for the threshold the 
-
 clock pulses
 
 => 2. Once the transmit signal is High then the transmiter based on the data received it forms the data format i.e. it loads the data
-
 [ STOP [USUALLY 0], DATA [WE HERE USE 8 BIT DATA IN FROM OF ASCII VALUES OF KEY],STOP BIT[1]]
 
 => 3. Then it performs the shift operation based on the counter reaching the respective clock pulses it shifts bit by bit to the output of transmiter 
