@@ -74,7 +74,13 @@ UART TRANSMITTER
 
 FPGA OUTPUT
 
+INPUT FROM TERATERM IS A : ASCII value of "a" is obtained as 01100001 [order depends on leds switches given here from right to left]
+
+Note: Input from Teraterm is not displayed on Tera Teram
+
 <img width="876" height="632" alt="image" src="https://github.com/user-attachments/assets/b890f67a-beb5-423a-acf0-e399dc7c15c9" />
+
+The inputs from the Switches of FPGA given are ASCII value of "b":01100010 and "c":01100011 which gets displayed on output of teraterm
 
 TERA TERM OUTPUT 
 
