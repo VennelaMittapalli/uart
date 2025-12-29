@@ -4,7 +4,7 @@ UART stands for Universal Asynchronous Receiver Tranmitter which is communicatio
 
 *******************************************************************************************************************************************************************
 
-TRANSMITER:
+******************************************************************************************TRANSMITER************************************************************************************
 
 => 1. The input to the Transmiter is provided from the on-board switches gets transmited based on the Transmit signal which gets activated based on the Push button which needs to pressed for the threshold the 
 clock pulses
