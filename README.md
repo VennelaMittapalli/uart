@@ -1,4 +1,4 @@
-*******************************************************************************************UART***************************************************************************************************************
+*******************************************************************************************UART******************************************************************************************
 
 UART stands for Universal Asynchronous Receiver Tranmitter which is communication protocol for the Serial Data Transmission. It converts the data from serial to parallel or from parallel to serial. 
 
