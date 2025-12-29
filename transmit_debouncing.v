@@ -37,3 +37,4 @@ always @(posedge clk) begin
  else
     transmit <= 0; //debounced signal is 0
 end
+endmodule
