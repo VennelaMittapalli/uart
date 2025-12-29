@@ -46,7 +46,7 @@ if(inc_samplecounter) sample_counter <= sample_counter + 1;
 if(clear_samplecounter) sample_counter <= 0;
      //increment the bitcounter based on the increment bitcounter which gets updated based on the in_bitcounter signal which gets updated when samplecounter reaches the divsample value
 if(inc_bitcounter) bitcounter <= bitcounter + 1;
-     
+     //clear the bitcounter based on clear bitcounter signal which gets value when the state is 0 and stop bit detected
 if(clear_bitcounter) bitcounter <= 0;
 end
 end
