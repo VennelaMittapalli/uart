@@ -22,6 +22,19 @@ clock pulses
 
 ************************************************************************************RECEIVER************************************************************************************
 
+=> 1. The receiver gets the input from the Tera Term based on the key pressed 
+
+=> 2. The output gets displayed on the LED which is the respective ASCII value of the input in the Tera Term
+
+=> 3. The input is obtained from Teraterm as receiver input and the repective output is 8 bit output
+
+=> 4. We here make sure that the sampling happens after the half clock pulse for synchronization purpose
+
+=> 5. The reciever checks for the required no of sample rate reached and based on that each bit is recieved 
+
+=> 6. After receiving all the 8 bits then it resets to intial state 
+
+
 FSM
 
 
